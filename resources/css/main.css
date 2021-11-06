@@ -7,6 +7,61 @@ html {
   height: 100%;
 }
 
+/* Navbar */
+.navbar {
+  width: 99%;
+  height: 2rem;
+  background-color: #333;
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
+  position: absolute;
+  z-index: 300;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.navbar-link {
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: #fff;
+  margin: 0 3rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.change.navbar-link {
+  color: #fff;
+}
+
+.navbar-link:hover {
+  color: #fff;
+}
+
+.navbar-link::before {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
+  position: absolute;
+  right: -15%;
+  bottom: -0.3rem;
+  transition: width 0.2s;
+}
+
+.change.navbar-link::before {
+  width: 120%;
+}
+
+.navbar-link:hover::before {
+  width: 100%;
+}
+/* End of Navbar */
+
+
 /*BANNER*/
 
 #banner {
@@ -14,7 +69,7 @@ html {
   justify-content: center;
   padding: 8em 4em 6em 4em;
   min-height: 50vh;
-  background-image: url(../resources/img/space.jpg);
+  background-image: url(../img/space.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -225,3 +280,4 @@ html {
   height: 100px;
 }
 /* End of Section 5 */
+
